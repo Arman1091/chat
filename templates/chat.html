@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}SparkWIT | | Chat{% endblock %}
+
+{% block content %}
+    <div class="chatwindow">
+        <center><h2 style="color: beige;">SparkWIT Babbles!</h2></center>
+        <center><h3 style="color: beige;">Room : {{session['room']}}</h3></center><br>
+        <center><textarea id="chat" cols="90" rows="12" placeholder="No messages yet. Start one..."></textarea><br /><br /></center>
+        <div>
+      <center><div class="buttonIn">
+        <input type="text" id="text" name="text" size="75" placeholder="Enter your message here" />
+        <button type="button" id="send" class="btn btn-success">SEND</button>
+        <br>
+        <br>
+      </div></center>
+      <center><button type="button" class="btn btn-danger" onclick=leave_room()>Leave this Chat</button></center>
+    </div>
+{% endblock %}
